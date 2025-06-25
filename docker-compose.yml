@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  astro-blog:
+    build: .
+    container_name: astro-blog
+    ports:
+      - 4321:4321
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    command: tail -f /dev/null
